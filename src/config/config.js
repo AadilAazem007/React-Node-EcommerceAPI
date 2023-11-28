@@ -3,7 +3,7 @@ import mysql from 'mysql'
 var con = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "",
+  password: "12345",
   database: 'ecommerce'
 });
 
