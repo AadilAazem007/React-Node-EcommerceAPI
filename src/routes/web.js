@@ -1,5 +1,7 @@
 import express from 'express'
 import ProductController from '../controllers/ProductController.js'
+import CartController from '../controllers/CartController.js'
+
 const router = express.Router()
 
 //Product Route
@@ -13,5 +15,9 @@ router.get('/category/:category', ProductController.getSingleCategoryData)  //th
 //Brand Route
 router.get('/brand', ProductController.getBrandList)  //this route is to get all brand list
 router.get('/brand/:brand', ProductController.getSingleBrandData)  //this route is to get all brand list
+
+//Cart Route
+router.get('/cart/:id', CartController.getCartDataByUserId)
+router.post('/cart/store-cart', CartController.storeCartData)
 
 export default router
