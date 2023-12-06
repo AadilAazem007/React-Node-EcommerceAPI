@@ -1,6 +1,7 @@
 import express from 'express'
 import ProductController from '../controllers/ProductController.js'
 import CartController from '../controllers/CartController.js'
+import AddressController from '../controllers/AddressController.js'
 
 const router = express.Router()
 
@@ -19,5 +20,11 @@ router.get('/brand/:brand', ProductController.getSingleBrandData)  //this route 
 //Cart Route
 router.get('/cart/:id', CartController.getCartDataByUserId)
 router.post('/cart/store-cart', CartController.storeCartData)
+router.delete('/cart/remove/:id', CartController.removeCartProduct)
+router.patch('/cart/updateqnt/:id', CartController.updateCartQuantity)
+
+//Address Route
+router.post('/address/insert', AddressController.saveUserAddres)
+router.get('/address/getAddress/:userId', AddressController.getUserAddress)
 
 export default router
