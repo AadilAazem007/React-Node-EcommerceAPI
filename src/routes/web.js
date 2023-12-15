@@ -2,6 +2,7 @@ import express from 'express'
 import ProductController from '../controllers/ProductController.js'
 import CartController from '../controllers/CartController.js'
 import AddressController from '../controllers/AddressController.js'
+import OrderController from '../controllers/OrderController.js'
 
 const router = express.Router()
 
@@ -26,5 +27,8 @@ router.patch('/cart/updateqnt/:id', CartController.updateCartQuantity)
 //Address Route
 router.post('/address/insert', AddressController.saveUserAddres)
 router.get('/address/getAddress/:userId', AddressController.getUserAddress)
+
+//Order Route
+router.post('/order/save-order', OrderController.saveOrder)
 
 export default router

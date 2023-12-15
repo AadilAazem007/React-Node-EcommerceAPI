@@ -32,6 +32,7 @@ import con from "../config/config.js";
                     }
                     else{
                         console.error('User Address is already inserted')
+                        res.send("User Address is already inserted");
                     }
                 }
             }).catch(error => {
