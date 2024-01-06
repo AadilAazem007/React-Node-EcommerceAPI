@@ -12,5 +12,5 @@ app.use(bodyParser.json());
 app.use('/', router)
 
 app.listen(port, ()=> {
-    console.log(`server connect on port ${port}`)
+    console.log(`server connect on port ${port}`) 
 })

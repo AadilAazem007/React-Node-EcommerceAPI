@@ -23,7 +23,7 @@ class OrderController {
                         return res.status(500).send("Internal Server Error");
                     }
                     res.send(data);
-                }) 
+                })  
             }
             else
             {

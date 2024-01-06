@@ -3,6 +3,7 @@ import ProductController from '../controllers/ProductController.js'
 import CartController from '../controllers/CartController.js'
 import AddressController from '../controllers/AddressController.js'
 import OrderController from '../controllers/OrderController.js'
+import UserController from '../controllers/UserController.js'
 
 const router = express.Router()
 
@@ -30,5 +31,8 @@ router.get('/address/getAddress/:userId', AddressController.getUserAddress)
 
 //Order Route
 router.post('/order/save-order', OrderController.saveOrder)
+
+//User Route
+router.post('/users/save-data', UserController.saveUserData) 
 
 export default router
